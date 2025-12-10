@@ -6,7 +6,7 @@
 
     <!-- WhatsApp and Open Graph Meta Tags -->
     <meta property="og:title" content="ದಿ|| ವೇ. ಬ್ರ. ಶ್ರೀ ನರಸಿಂಹಮೂರ್ತಿ - ಉತ್ತರಕ್ರಿಯಾದಿ ಕಾರ್ಯಕ್ರಮಗಳು" />
-    <meta property="og:description" content="04-12-2025 ರಂದು ದೈವಾಧೀನರಾದ ನಮ್ಮ ಪೂಜ್ಯ ತಂದೆಯವರ ಉತ್ತರಕ್ರಿಯಾದಿ ಕರ್ಮಗಳ ವಿವರಗಳು. ದಿನಾಂಕ: 13-12-2025 ರಿಂದ 17-12-2025." />
+    <meta property="og:description" content="04-12-2025 ರಂದು ದೈವಾಧೀನರಾದ ನಮ್ಮ ಪೂಜ್ಯ ತಂದೆಯವರ ಉತ್ತರಕ್ರಿಯಾದಿ ಕರ್ಮಗಳ ವಿವರಗಳು. || ದಿನಾಂಕ: 13-12-2025 - ಧರ್ಮೋದಕ || ದಿನಾಂಕ: 16-12-2025 - ಮಾಸಿಕ || ದಿನಾಂಕ: 17-12-2025 - ವೈಕುಂಠ ಸಮಾರಾಧನೆ" />
     <meta property="og:image" content="https://gilga98.github.io/parijatha/tatha-v-meta.jpeg" />
     <meta property="og:image:width" content="500" />
     <meta property="og:image:height" content="500" />
@@ -291,6 +291,13 @@
                 font-size: 12px;
             }
         }
+
+        .table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    margin-bottom: 20px;
+}
     </style>
 </head>
 <body>
@@ -318,6 +325,8 @@
             <!-- Schedule Section -->
             <div class="section">
                 <div class="section-title">📅 ಉತ್ತರಕ್ರಿಯಾದಿ ಕಾರ್ಯಕ್ರಮಗಳು</div>
+                <!-- Add this wrapping div -->
+<div class="table-wrapper">
                 <table class="schedule-table">
                     <thead>
                         <tr>
@@ -352,6 +361,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
             <!-- Family Section -->
             <div class="section">
@@ -387,11 +397,5 @@
         </div>
     </div>
     
-    <script>
-        // Print to PDF functionality
-        window.addEventListener('load', function() {
-            console.log('Document loaded. Press Ctrl+P (or Cmd+P) to print/save as PDF');
-        });
-    </script>
 </body>
 </html>
