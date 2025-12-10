@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಶ್ರೀ ನರಸಿಂಹಮೂರ್ತಿ - ಉತ್ತರ ಕ್ರಿಯಾ ಕಾರ್ಯಕ್ರಮ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans Kannada', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #333;
+            padding: 10px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2d1b3d 0%, #1a1a2e 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 4px solid #d4af37;
+        }
+        
+        .photo-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: -40px 0 20px 0;
+            z-index: 10;
+        }
+        
+        .photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 6px solid white;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            word-break: break-word;
+        }
+        
+        .header .subtitle {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 5px;
+        }
+        
+        .header .date-info {
+            font-size: 14px;
+            opacity: 0.9;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-top: 12px;
+            display: inline-block;
+        }
+        
+        .content {
+            padding: 25px 20px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d1b3d;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d4af37;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .info-block {
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border-left: 4px solid #d4af37;
+        }
+        
+        .info-block strong {
+            display: block;
+            color: #2d1b3d;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .info-block p {
+            color: #555;
+            font-size: 16px;
+            word-break: break-word;
+        }
+        
+        .location-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 500;
+            background: #2d1b3d;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            transition: all 0.3s;
+        }
+        
+        .location-link:hover {
+            background: #3d2b4d;
+            text-decoration: underline;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+        }
+        
+        .schedule-table th {
+            background: #2d1b3d;
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .schedule-table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+        
+        .schedule-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .schedule-table tr:hover {
+            background: #f0f0f0;
+        }
+        
+        .family-section {
+            background: #fff9f0;
+            padding: 18px;
+            border-radius: 8px;
+            border-left: 4px solid #d4af37;
+        }
+        
+        .family-section h4 {
+            color: #2d1b3d;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        
+        .family-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .family-section li {
+            padding: 8px 0;
+            color: #555;
+            font-size: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .family-section li:before {
+            position: absolute;
+            left: 0;
+        }
+        
+        .contact-section {
+            background: #f0f8ff;
+            padding: 18px;
+            border-radius: 8px;
+            border-left: 4px solid #4a90e2;
+        }
+        
+        .contact-section h4 {
+            color: #2d1b3d;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        .contact-item a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 12px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .header {
+                page-break-after: avoid;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header {
+                padding: 20px 15px;
+            }
+            
+            .photo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .header h1 {
+                font-size: 20px;
+            }
+            
+            .content {
+                padding: 18px 15px;
+            }
+            
+            .section-title {
+                font-size: 16px;
+            }
+            
+            .schedule-table th,
+            .schedule-table td {
+                padding: 10px 8px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <br/>
+        </div>
+        
+        <div class="photo-container">
+            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/f61bf450-bcb8-43a2-9343-1440943ba537" alt="ಶ್ರೀ ನರಸಿಂಹಮೂರ್ತಿ" class="photo">
+        </div>
+        
+        <!-- Title and Death Notice -->
+        <div class="content" style="text-align: center; background: #f5f5f5; border-bottom: 2px solid #d4af37;">
+            <p style="color: #555; margin: 0 0 15px 0; font-size: 15px;">ನಮ್ಮ ಪೂಜ್ಯ ತಂದೆಯವರಾದ</p>
+            <h2 style="color: #2d1b3d; margin: 15px 0 10px 0; font-size: 20px;">ದಿ|| ವೇ. ಬ್ರ. ಶ್ರೀ ನರಸಿಂಹಮೂರ್ತಿ</h2>
+            <p style="color: #555; margin: 0 0 15px 0; font-size: 15px;">
+                <strong>04-12-2025, ಗುರುವಾರ</strong>ದಂದು ದೈವಾಧೀನರಾದರೆಂದು ತಿಳಿಸಲು ವಿಷಾದಿಸುತ್ತೇವೆ
+            </p>
+        </div>
+        
+        <!-- Content Section -->
+        <div class="content"> 
+            <!-- Schedule Section -->
+            <div class="section">
+                <div class="section-title">📅 ಉತ್ತರಕ್ರಿಯಾದಿ ಕಾರ್ಯಕ್ರಮಗಳು</div>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>ಕಾರ್ಯಕ್ರಮ</th>
+                            <th>ದಿನಾಂಕ</th>
+                            <th>ವಾರ</th>
+                            <th>ಸಮಯ</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ಧರ್ಮೋದಕ</td>
+                            <td>13-12-2025</td>
+                            <td>ಶನಿವಾರ</td>
+                            <td>10:00 AM</td>
+                            <td><a href="https://maps.app.goo.gl/ZJMiWx3yc8dYQbyx7" class="location-link" target="_blank">📍 Location</a></td>
+                        </tr>
+                        <tr>
+                            <td>ಮಾಸಿಕ</td>
+                            <td>16-12-2025</td>
+                            <td>ಮಂಗಳವಾರ</td>
+                            <td>12:30 PM</td>
+                            <td><a href="https://maps.app.goo.gl/ZJMiWx3yc8dYQbyx7" class="location-link" target="_blank">📍 Location</a></td>
+                        </tr>
+                        <tr>
+                            <td>ವೈಕುಂಠ ಸಮಾರಾಧನೆ</td>
+                            <td>17-12-2025</td>
+                            <td>ಬುಧವಾರ</td>
+                            <td>11:00 AM</td>
+                            <td><a href="https://maps.app.goo.gl/ZJMiWx3yc8dYQbyx7" class="location-link" target="_blank">📍 Location</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Family Section -->
+            <div class="section">
+                <div class="section-title">🙏 ಶೋಕತಪ್ತ ಕುಟುಂಬ ವರ್ಗದವರು</div>
+                <div class="family-section">
+                    <ul>
+                        <li><b>ಟಿ. ಎನ್. ನಾರಾಯಣ ಪ್ರಸಾದ್ ಮತ್ತು ಕುಟುಂಬ</b>, ತುಮಕೂರು </li>
+                        <li><b>ಟಿ. ಎನ್. ರಮೇಶ್ ಮತ್ತು ಕುಟುಂಬ</b>, ತುಮಕೂರು </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Contact Section -->
+            <div class="section">
+                <div class="section-title">📞 ಸಂಪರ್ಕ ಸೂಚನೆ</div>
+                <div class="contact-section">
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <a href="tel:+919008805298">+91 9008805298</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <a href="tel:+918722662005">+91 8722662005</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>🙏 ತಸ್ಯಾಃ᳚ ಶಿಖಾ॒ಯಾ ಮ॑ಧ್ಯೇ ಪ॒ರಮಾ᳚ತ್ಮಾ ವ್ಯ॒ವಸ್ಥಿ॑ತಃ ।
+                ಸ ಬ್ರಹ್ಮ॒ ಸ ಶಿವಃ॒ ಸ ಹರಿಃ॒ ಸೇಂದ್ರಃ॒ ಸೋಽಕ್ಷ॑ರಃ ಪರ॒ಮಃ ಸ್ವ॒ರಾಟ್ ॥ 🙏</p>
+        </div>
+    </div>
+    
+</body>
+</html>
